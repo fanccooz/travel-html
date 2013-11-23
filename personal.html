@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="images/style.css" />
+<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="js/jquery-webox.js"></script>
+<title>知网门票</title>
+</head>
+
+<body>
+<!--头部-->
+<div class="header">
+  <div class="top-nav"><a href="register.html" >欢迎您！12000000</a>|<a href="#" class="c-login"> 退出</a>|<a href="service.html">帮助中心</a> </div>
+  <div class="header-con">
+    <div class="logo"><a href="#"><img src="images/logo.png" alt="images/logo.png"/></a></div>
+    <div class="meau"><a href="index.html" class="on">首页</a><a href="ticket.html">门票 </a><a href="scenic.html">景区</a></div>
+    <form class="search">
+    <table>
+      <tr><td><input type="text" class="text"/></td><td><input type="submit"  class="submit" value=""/></td></tr>
+    </table>
+    </form>
+  </div>
+</div>
+<!--内容-->
+<div class="con-member">
+  <div class="member-bg">
+    <!--左边-->
+    <div class="m-left">
+      <h1><a href="personal.html">会员中心</a></h1>
+      <ul>
+        <li><a href="personal-info.html">修改基本信息</a></li>
+        <li><a href="personal-list.html">订单管理</a></li>
+        <li><a href="member-password.html">修改密码</a></li>
+      </ul>
+    </div>
+    <!--右边-->
+    <div class="m-right">
+      <h2>个人基本信息</h2>
+      <dl>
+        <dt><a href="#"><img src="ad/pic_01.jpg" alt="ad/pic_01.jpg" width="170"/></a></dt>
+        <dd>
+          <h3>欧阳芳芳</h3>
+          <p>邮箱：xxxxxxxx@gmail.com   联系电话：123444555555</p>
+          <p>
+            您当前的账户余额为：<em>0</em>元 <a href="#">如何获取现金奖励？</a><br />
+            交易提醒：<a href="member-p-list.html">未付款(0)</a>
+          </p>
+        </dd>
+      </dl>
+      <h2>订单信息</h2>
+      <table>
+        <tr><th width="35%">门票名称</th><th width="15%">购买时间</th><th width="10%">价格</th><th width="10%">支付状态</th><th width="10%">操作</th></tr>
+        <tr><td><a class="oredr-detail" style="width:400px;">杭州西溪国家湿地西区杭州西杭州西溪国家湿地西区杭州西</a></td><td>2013-04-01 12:35 </td><td class="orange">123￥</td><td>待支付</td><td class="btn"><a href="#"><span>退票</span></a></td></tr>
+        <tr><td><a class="oredr-detail" style="width:400px;">杭州西溪国家湿地西区杭州西杭州西溪国家湿地西区杭州西</a></td><td>2013-04-01 12:35 </td><td class="orange">123￥</td><td>已支付</td><td class="btn"><a href="#"><span>退票</span></a></td></tr>
+      </table>
+    </div>
+    <!--e 右边-->
+  </div>
+</div>
+<!--尾部-->
+<div style=" text-align:center;">
+    杭州创搏网络科技有限公司 版权所有 浙B2-20050208 站长统计
+</div>
+<!--订单详细-->
+<div id="detail" style="display:none;">
+  <table class="order">
+    <tr><th>门票：</th><td>杭州西溪国家湿地西区杭州西杭州西</td></tr>
+    <tr style="background-color:#f8f8f8;"><th>价格：</th><td class="orange">123￥</td></tr>
+    <tr><th>购买时间：</th><td>2013-03-12 8:00</td></tr>
+    <tr style="background-color:#f8f8f8;"><th>有效时间：</th><td>2013-03-12至2013-04-01</td></tr>
+    <tr><th>二维码：</th><td><img src="ad/popular_1.jpg" /></td></tr>
+    <tr style="background-color:#f8f8f8;"><th>扫描情况：</th><td>未扫描<em style="display:none">已扫描</em></td></tr>
+    <tr><th>支付情况：</th><td>未支付</td></tr>
+  </table>
+</div>
+<script>
+	$('.oredr-detail').click(function(){
+		$.webox({
+			height:350,
+			width:400,
+			bgvisibel:true,
+			title:'订单详细',
+			html:$("#detail").html()
+		});
+	});
+</script>
+</body>
+</html>
